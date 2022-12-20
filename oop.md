@@ -49,8 +49,7 @@ partes con la etiqueta *Best Practice* y resaltadas en color verde.
 Por ejemplo en el capítulo 
 [1.2 Comments](https://www.learncpp.com/cpp-tutorial/comments/)
 hallará este recuadro:
-
-
+![Best Practice](https://raw.githubusercontent.com/IB-2022-2023/P12-OOP/main/best-prctice.png "Best Practice")
 
 *Best practice
 
