@@ -38,17 +38,29 @@ para su evaluación
 * Demuestra que es capaz de ejecutar comandos Linux en su VM
 
 ### Material de estudio complementario
-Comience por estudiar el material contenido en las transparencias
-[Debugging your source code](https://docs.google.com/presentation/d/1-vU5UF1ruhHWMp-lJsoYsq8s8B9ZvJvBsdDUu4wVgDU/edit?usp=sharing)
-que puede encontrar en el aula virtual de la asignatura.
-
-Estudie del
+Como parte de las tareas de esta práctica deberá entregar un fichero de texto con nombre `Good-Practices.txt`
+en el que recopile el conjunto de buenas prácticas de programación que se proponen en el 
 [tutorial de referencia](https://www.learncpp.com/)
-en la asignatura todos los apartados del capítulo 3 (teniendo en cuenta las especificidades de VSC).
+que hemos usado en *Informática Básica*.
 
-La introducción a la depuración que figura en este enunciado ha sido extraído de la lección
-[Debugging Techniques](https://www.cs.cornell.edu/courses/cs312/2006fa/lectures/lec26.html)
-de la universidad de Cornell.
+Para recopilar esa relación de buenas prácticas, revise los capítulos 0-18 localizando en el texto aquellas
+partes con la etiqueta *Best Practice* y resaltadas en color verde.
+
+Por ejemplo en el capítulo 
+[1.2 Comments](https://www.learncpp.com/cpp-tutorial/comments/)
+hallará este recuadro:
+
+
+
+*Best practice
+
+Comment your code liberally, and write your comments as if speaking to someone who has no idea what the code does. Don’t assume you’ll remember why you made specific choices.*
+
+Así que su fichero `Good-Practices.txt` deberá incluir una línea:
+
+*Comente su código abundantemente, y escriba sus comentarios como si hablara con alguien que no tiene ni idea de lo que hace el código. 
+No de por sentado que recordará por qué ha tomado determinadas decisiones.*
+
 
 ### Ejercicios
 * Al realizar los ejercicios cree dentro de su repositorio de esta práctica un directorio diferente
