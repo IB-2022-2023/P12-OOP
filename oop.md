@@ -39,27 +39,24 @@ para su evaluación
 
 ### Material de estudio complementario
 Como parte de las tareas de esta práctica deberá entregar un fichero de texto con nombre `Good-Practices.txt`
-en el que recopile el conjunto de buenas prácticas de programación que se proponen en el 
+en el que recopile traducidas a español el conjunto de buenas prácticas de programación que se proponen en el 
 [tutorial de referencia](https://www.learncpp.com/)
 que hemos usado en *Informática Básica*.
 
 Para recopilar esa relación de buenas prácticas, revise los capítulos 0-18 localizando en el texto aquellas
 partes con la etiqueta *Best Practice* y resaltadas en color verde.
-
 Por ejemplo en el capítulo 
 [1.2 Comments](https://www.learncpp.com/cpp-tutorial/comments/)
 hallará este recuadro:
 ![Best Practice](https://raw.githubusercontent.com/IB-2022-2023/P12-OOP/main/best-prctice.png "Best Practice")
 
-*Best practice
-
-Comment your code liberally, and write your comments as if speaking to someone who has no idea what the code does. Don’t assume you’ll remember why you made specific choices.*
-
 Así que su fichero `Good-Practices.txt` deberá incluir una línea:
 
-*Comente su código abundantemente, y escriba sus comentarios como si hablara con alguien que no tiene ni idea de lo que hace el código. 
+* *Comente su código abundantemente, y escriba sus comentarios como si hablara con alguien que no tiene ni idea de lo que hace el código. 
 No de por sentado que recordará por qué ha tomado determinadas decisiones.*
 
+Si conforme recopila estas buenas prácticas encuentra alguna que no entienda o que tenga dudas sobre si ha
+estudiado, publíquela en el foro del aula virtual de *Informática Básica* para tratar de enterla.
 
 ### Ejercicios
 * Al realizar los ejercicios cree dentro de su repositorio de esta práctica un directorio diferente
