@@ -50,7 +50,7 @@ Por ejemplo en el capítulo
 hallará este recuadro:
 ![Best Practice](https://raw.githubusercontent.com/IB-2022-2023/P12-OOP/main/best-prctice.png "Best Practice")
 
-Así que su fichero `Good-Practices.txt` deberá incluir una línea:
+Así que su fichero `Good-Practices.txt` deberá incluir un párrafo:
 
 * *Comente su código abundantemente, y escriba sus comentarios como si hablara con alguien que no tiene ni idea de lo que hace el código. 
 No de por sentado que recordará por qué ha tomado determinadas decisiones.*
@@ -167,15 +167,82 @@ Modo de uso: ./racionales fichero_entrada fichero_salida
 fichero_entrada: Fichero de texto conteniendo líneas con un par de números racionales: `a/b c/d` separados por un espacio
 fichero_salida:  Fichero de texto que contendrá líneas con las operaciones realizadas: `a/b + c/d = n/m`
 ```
-Desarrolle tests (Google Tests) para comprobar el correcto funcionamiento de todos los métodos de la clase
-`Racional`.
 
 4. Descargue y estudie el problema 
 [Robot Simulator](https://exercism.org/tracks/cpp/exercises/robot-simulator)
 de Exercism y lea también el enunciado del problema siguiente (número 5) de esta relación.
-Teniendo en mente ese problema (*Robot Simulator*), diseñe una solución orientada a objetos para el problema
+El propósito de estudiar el problema de Exercism antes de resolver este es que utilice aquí los mismos
+identificadores para los métodos que necesite que los que utilizará en el problema siguiente (5).
+Teniendo en mente ese problema de Exercism (*Robot Simulator*), diseñe una solución orientada a objetos para el problema
 [Movements on the ground](https://jutge.org/problems/P79784) de Jutge.
-Aunque no se requieren en Jutge, desarrolle tests unitarios (Google Tests) para comprobar la corrección de su
-diseño.
 Suba el problema a Jutge para su evaluación.
+
+Su progama deberá basarse en una clase `Robot` a la que dotará de la funcionalidad necesaria para resolver el
+probleja de Jutge.
+Para que Jutge evalúe su solución tendrá que (contrariamente a lo habitual) escribir todo su código en un
+único fichero.
+Incluya en un fichero `robot_simulator_jutge.cc` tanto el código de la clase `Robot` como la función `main()`
+que instancia un objeto `robot`.
+
+El código de la función `main()` podría ser similar a este:
+```cpp
+ 1 /** @brief Robot Client main function */
+ 2 int main() {
+ 3   const std::pair<int, int> kPosition{0, 0};
+ 4   const Bearing kBearing {Bearing::NORTH};
+ 5   Robot robot{kPosition, kBearing};
+ 6   std::string sequence;
+ 7   getline(std::cin, sequence);
+ 8   for (const auto& movement : sequence) {
+ 9     ...
+10   }
+11   std::pair<int, int> final_position = robot.get_position();
+12   std::cout << "(" << final_position.first << ", " << final_position.second  << ")" << std::endl;
+13   return 0;
+14 }
+```
+En la función `main()` se declara (línea 5) un objeto `robot` que se inicializa con una posición (*position*) y una
+orientación (*bearing*) que han sido definidas anteriormentei (líneas 3 y 4).
+Para trabajar con las posiciones se utiliza un objeto `position` que se define en la clase `std::pair` de la
+STL y que en este caso se utiliza para almacenar un par de números enteros, que definen la posición del robot.
+Los ejemplos de
+[este tutorial](https://www.geeksforgeeks.org/pair-in-cpp-stl/)
+de Geeksforgeeks pueden servirle de ejemplo para iniciarse en el estudio de `std::pair`.
+Al revisar ese tutorial y reproducir sus ejemplos, ¡tenga en cuenta las consideraciones de estilo que se usan
+en *Informática Básica*!.
+
+Las orientaciones que utiliza el robot (norte, sur, este, oeste) se definen en el programa en una clase
+`Bearing` cuya definición es la siguiente:
+```cpp
+enum class Bearing { 
+  NORTH, 
+  EAST,
+  SOUTH, 
+  WEST
+};
+```
+Es decir, se trata de una clase que simplemente define una enumeración con los valores correspondientes a los
+puntos cardinales.
+
+La función `main()` anterior lee una secuencia de movimientos (línea 7) y en el bucle `for` de la línea 8 hace que el robot ejecute
+cada uno de los movimientos de la secuencia.
+Al final del bucle (línea 12) se imprime la posición final del robot.
+
+5.  Realice un programa orientado a objetos que resuelva el ejercicio 
+[Robot Simulator](https://exercism.org/tracks/cpp/exercises/robot-simulator)
+de Exercism. 
+Consiga que su solución pase todos los tests y envíe su solución a la plataforma.
+Si estudia el fichero `robot_simulator_test.cpp` de tests del problema observará que la clase `Robot` a
+diseñar ha de contener al menos los métodos:
+* *get_bearing()*
+* *get_position()*
+* *turn_right()*
+* *turn_left()*
+* *advance()*
+* *execute_sequence()*
+
+Deduzca también a partir de los tests los constructores que ha de tener la clase `Robot`.
+
+Recuerde que la estrategia a seguir en la solución del problema consiste en ir "desbloqueando" progresivamente
+los distintos tests que ha de pasar el programa.
 
