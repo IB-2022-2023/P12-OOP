@@ -72,7 +72,25 @@ Alternativamente podría también usarse `cmake` con un fichero `CMakeLists`, si
 * Cada función deberá realizar una única tarea y hacerlo correctamente
 * El identificador de una función debe reflejar claramente la finalidad de la función
 
-1. La clase Estudiante
+1. La clase Estudiante.
+
+Para este ejercicio no se realizará una descripción detallada. 
+Cada estudiante realizará el diseño que más adecuado le parezca y que mejor se adapte a sus conocimientos
+actuales sobre programación orientada a objetos.
+Antes de programar el ejercicio, dedique unos minutos a pensar los diferentes elementos que considere que
+deban intervenir en su programa.
+
+Desarrolle una clase `Estudiante` que permita representar estudiantes de la Universidad de La Laguna.
+Coloque a la clase los atributos que considere necesarios y tenga en cuenta el material estudiado sobre
+*Relaciones entre clases* para hacer que su clase `Estudiante` tenga relaciones (del tipo que le parezca más
+adecuado) con otras clases que intervengan en su diseño.
+Por ejemplo, su programa podría contemplar también el concepto de `Asignatura` de modo que un estudiante
+estará matriculado en un cierto número de asignaturas.
+
+Escriba un programa cliente `gestion_academica.cc` que permita realizar algún tipo de gestión con los
+estudiantes de su programa.
+
+Haga que su programa lea (y tal vez escriba) información sobre los estudiantes en ficheros de texto.
 
 2. Desarrolle una clase `ComputeInt` que permita la realización de diferentes cálculos con números enteros.
 Incluya al menos los siguientes métodos en la clase:
