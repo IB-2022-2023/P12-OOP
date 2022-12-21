@@ -55,8 +55,9 @@ Así que su fichero `Good-Practices.txt` deberá incluir un párrafo:
 * *Comente su código abundantemente, y escriba sus comentarios como si hablara con alguien que no tiene ni idea de lo que hace el código. 
 No de por sentado que recordará por qué ha tomado determinadas decisiones.*
 
-Si conforme recopila estas buenas prácticas encuentra alguna que no entienda o que tenga dudas sobre si ha
-estudiado, publíquela en el foro del aula virtual de *Informática Básica* para tratar de enterla.
+Si conforme recopila estas buenas prácticas encuentra alguna que no entienda, precise alguna explicación
+o que tenga dudas sobre si ha estudiado el correspondiente concepto, publíquela en el foro del aula virtual 
+de *Informática Básica* para tratar de aclararlo.
 
 ### Ejercicios
 * Al realizar los ejercicios cree dentro de su repositorio de esta práctica un directorio diferente
@@ -68,31 +69,11 @@ Alternativamente podría también usarse `cmake` con un fichero `CMakeLists`, si
 * Haga que todos los programas tomen su entrada por la línea de comandos y en caso de que se ejecuten sin
   pasarles el número adecuado de parámetros impriman en pantalla un mensaje indicando el modo correcto de
   ejecutar el programa.
-* El código de cada uno de los programas deberá organizarse de forma modular, es decir haciendo uso de funciones
-* Cada función deberá realizar una única tarea y hacerlo correctamente
-* El identificador de una función debe reflejar claramente la finalidad de la función
+* El código de cada uno de los programas deberá organizarse de forma modular, es decir haciendo uso de funciones.
+* Cada función deberá realizar una única tarea y hacerlo correctamente.
+* El identificador de una función debe reflejar claramente la finalidad de la función.
 
-1. La clase Estudiante.
-
-Para este ejercicio no se realizará una descripción detallada. 
-Cada estudiante realizará el diseño que más adecuado le parezca y que mejor se adapte a sus conocimientos
-actuales sobre programación orientada a objetos.
-Antes de programar el ejercicio, dedique unos minutos a pensar los diferentes elementos que considere que
-deban intervenir en su programa.
-
-Desarrolle una clase `Estudiante` que permita representar estudiantes de la Universidad de La Laguna.
-Coloque a la clase los atributos que considere necesarios y tenga en cuenta el material estudiado sobre
-*Relaciones entre clases* para hacer que su clase `Estudiante` tenga relaciones (del tipo que le parezca más
-adecuado) con otras clases que intervengan en su diseño.
-Por ejemplo, su programa podría contemplar también el concepto de `Asignatura` de modo que un estudiante
-estará matriculado en un cierto número de asignaturas.
-
-Escriba un programa cliente `gestion_academica.cc` que permita realizar algún tipo de gestión con los
-estudiantes de su programa.
-
-Haga que su programa lea (y tal vez escriba) información sobre los estudiantes en ficheros de texto.
-
-2. Desarrolle una clase `ComputeInt` que permita la realización de diferentes cálculos con números enteros.
+1. Desarrolle una clase `ComputeInt` que permita la realización de diferentes cálculos con números enteros.
 Incluya al menos los siguientes métodos en la clase:
 * *Factorial* que permita calcular el factorial de un número (Problema
 [Factorial](https://jutge.org/problems/P48997_es)
@@ -119,7 +100,7 @@ main() {
 }
 ```
 
-3. La clase Racional.
+2. La clase Racional.
 
 Un 
 [número racional](https://en.wikipedia.org/wiki/Rational_number)
@@ -186,11 +167,11 @@ fichero_entrada: Fichero de texto conteniendo líneas con un par de números rac
 fichero_salida:  Fichero de texto que contendrá líneas con las operaciones realizadas: `a/b + c/d = n/m`
 ```
 
-4. Descargue y estudie el problema 
+3. Descargue y estudie el problema 
 [Robot Simulator](https://exercism.org/tracks/cpp/exercises/robot-simulator)
-de Exercism y lea también el enunciado del problema siguiente (número 5) de esta relación.
+de Exercism y lea también el enunciado del problema siguiente (número 4) de esta relación.
 El propósito de estudiar el problema de Exercism antes de resolver este es que utilice aquí los mismos
-identificadores para los métodos que necesite que los que utilizará en el problema siguiente (5).
+identificadores para los métodos que necesite que los que utilizará en el problema siguiente (4).
 Teniendo en mente ese problema de Exercism (*Robot Simulator*), diseñe una solución orientada a objetos para el problema
 [Movements on the ground](https://jutge.org/problems/P79784) de Jutge.
 Suba el problema a Jutge para su evaluación.
@@ -246,7 +227,7 @@ La función `main()` anterior lee una secuencia de movimientos (línea 7) y en e
 cada uno de los movimientos de la secuencia.
 Al final del bucle (línea 12) se imprime la posición final del robot.
 
-5.  Realice un programa orientado a objetos que resuelva el ejercicio 
+4.  Realice un programa orientado a objetos que resuelva el ejercicio 
 [Robot Simulator](https://exercism.org/tracks/cpp/exercises/robot-simulator)
 de Exercism. 
 Consiga que su solución pase todos los tests y envíe su solución a la plataforma.
@@ -263,4 +244,21 @@ Deduzca también a partir de los tests los constructores que ha de tener la clas
 
 Recuerde que la estrategia a seguir en la solución del problema consiste en ir "desbloqueando" progresivamente
 los distintos tests que ha de pasar el programa.
+
+5.- La realización de este ejercicio es opcional.
+Se recomienda realizarlo a aquél alumnado que considere que ha realizado progresos significativos en cuanto a
+su capacidad de realizar programas cada vez más complejos en C++.
+
+La clase `Automata`.
+
+En la práctica 10 de la asignatura se propuso un ejercicio en el que se leía desde un fichero la
+especificación de un autómata finito determinista.
+En este ejercicio se pide realizar una clase `Automata` para representar este tipo de autómatas.
+El constructor de la clase debería recibir como parámetro el nombre del fichero de texto en el que se
+especifica el autómata, y a partir de esa especificación el constructor construye los diferentes elementos que
+caracterizan al autómata.
+
+Tanga en cuenta que un autómata se caracteriza por un conjunto de estados (que pueden almacenarse en un
+vector) en el que cada estado puede ser de aceptación o no y tiene un número determinado de transiciones.
+Uno de los estados del autómata es un estado especial y se conoce como estado de arranque.
 
