@@ -259,6 +259,17 @@ especifica el autómata, y a partir de esa especificación el constructor constr
 caracterizan al autómata.
 
 Tanga en cuenta que un autómata se caracteriza por un conjunto de estados (que pueden almacenarse en un
-vector) en el que cada estado puede ser de aceptación o no y tiene un número determinado de transiciones.
+vector) en el que cada estado tiene un nombre (una etiqueta) y puede ser de aceptación o no y tiene un número determinado de transiciones.
 Uno de los estados del autómata es un estado especial y se conoce como estado de arranque.
 
+A modo de ejemplo, describiremos a continuación los diferentes elementos de este autómata:
+[esta figura](https://raw.githubusercontent.com/IB-2022-2023/P10-files/main/dfa.png)
+
+El autómata de la figura tiene 4 estados.
+Sus etiquetas son `q0`, `q1`,`q2` y `q3`.
+Los estados de aceptación están indicados con círculos de doble trazo y son `q1` y `q2`.
+El estado de arranque se indica con una flecha (triángulo) sobre él y es `q0`.
+Todos los estados del autómata de la figura tienen 2 transiciones (dos flechas que salen del estado en
+dirección a otro estado) y está etiquetadas con símbolos que en este ejemplo son `a` y `b`.
+
+```
