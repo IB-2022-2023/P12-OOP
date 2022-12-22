@@ -276,5 +276,3 @@ Los estados de aceptación están indicados con círculos de doble trazo y son `
 El estado de arranque se indica con una flecha (triángulo) sobre él y es `q0`.
 Todos los estados del autómata de la figura tienen 2 transiciones (dos flechas que salen del estado en
 dirección a otro estado) y está etiquetadas con símbolos que en este ejemplo son `a` y `b`.
-
-```
