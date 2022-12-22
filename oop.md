@@ -5,6 +5,8 @@
 ### Objetivos
 Los objetivos de esta práctica son que el alumnado:
 * Desarrolle programas sencillos en C++ utilizando programación orientada a objetos, así como todas las características del lenguaje estudiadas anteriormente
+* Aprenda a sobrecargar operadores en C++
+* Ponga en práctica diferentes formas de relacionar clases en C++
 
 ### Rúbrica de evaluacion de esta práctica
 Se señalan a continuación los aspectos más relevantes (la lista no es exhaustiva) que se tendrán en cuenta a la hora de evaluar esta práctica.
@@ -12,6 +14,9 @@ Se comprobará que el alumnado:
 * Conoce los conceptos expuestos en el material de referencia de esta práctica.
 * Ha realizado todos los ejercicios propuestos en este enunciado
 * Es capaz de escribir programas simples en C++ que resuelvan problemas de complejidad similar a los que se proponen en este documento
+* Sabe cómo implementar la sobrecarga de diferentes tipos de operadores en los programas que desarrolle
+* Es capaz de escribir programas orientados a objetos que involucren a diferentes clases con diversas formas
+  de realación entre las mismas
 * Sea capaz de utilizar VSC para editar y compilar programas de forma remota en su Máquina Virtual
 * Conoce la plataforma Exercism y es capaz de descargar y realizar problemas sencillos interaccionando con ella.
 * Es capaz de escribir un fichero `CMakeLists.txt` para automatizar el proceso de compilación de sus programas con `cmake` y `make`
@@ -263,7 +268,7 @@ vector) en el que cada estado tiene un nombre (una etiqueta) y puede ser de acep
 Uno de los estados del autómata es un estado especial y se conoce como estado de arranque.
 
 A modo de ejemplo, describiremos a continuación los diferentes elementos de este autómata:
-[esta figura](https://raw.githubusercontent.com/IB-2022-2023/P10-files/main/dfa.png)
+![este autómata](https://raw.githubusercontent.com/IB-2022-2023/P10-files/main/dfa.png)
 
 El autómata de la figura tiene 4 estados.
 Sus etiquetas son `q0`, `q1`,`q2` y `q3`.
