@@ -175,7 +175,7 @@ fichero_salida:  Fichero de texto que contendrá líneas con las operaciones rea
 3. Descargue y estudie el problema 
 [Robot Simulator](https://exercism.org/tracks/cpp/exercises/robot-simulator)
 de Exercism y lea también el enunciado del problema siguiente (número 4) de esta relación.
-El propósito de estudiar el problema de Exercism antes de resolver este es que utilice aquí los mismos
+El propósito de estudiar el problema de Exercism antes de resolver éste es que utilice aquí los mismos
 identificadores para los métodos que necesite que los que utilizará en el problema siguiente (4).
 Teniendo en mente ese problema de Exercism (*Robot Simulator*), diseñe una solución orientada a objetos para el problema
 [Movements on the ground](https://jutge.org/problems/P79784) de Jutge.
@@ -245,7 +245,22 @@ diseñar ha de contener al menos los métodos:
 * *advance()*
 * *execute_sequence()*
 
-Deduzca también a partir de los tests los constructores que ha de tener la clase `Robot`.
+El directorio `robot-simulator-initial` de esta práctica contiene código que puede servirle de ayuda para la
+resolución del problema.
+
+Comience por descargar el ejercicio de exercism, que se alojará en un directorio con nombre `robot-simulator`.
+Sustituya en ese directorio los ficheros `robot_simulator.cpp` y `robot_simulator.h` por los del directorio
+`robot-simulator-initial`. Habiendo hecho esos cambios, ejecute `cmake` en el directorio
+`robot-simulator-initial/build` y compruebe que el programa pasa los primeros tests.
+
+El el directorio `robot-simulator-initial` se han añadido los ficheros `robot_simulator_main.cc` y `Makefile`
+que no son necesarios para Exercism, pero pueden resultarle útiles para depurar su programa de forma
+independiente de Exercism.
+Copie esos ficheros en `robot-simulator/` y ejecute `make`, que generará un fichero ejecutable que puede
+depurar con el VSC si lo necesita.
+
+Continúe añadiendo el código necesario en `robot_simulator.cpp` y `robot_simulator.h` para pasar los tests de
+forma incremental.
 
 Recuerde que la estrategia a seguir en la solución del problema consiste en ir "desbloqueando" progresivamente
 los distintos tests que ha de pasar el programa.
@@ -276,3 +291,6 @@ Los estados de aceptación están indicados con círculos de doble trazo y son `
 El estado de arranque se indica con una flecha (triángulo) sobre él y es `q0`.
 Todos los estados del autómata de la figura tienen 2 transiciones (dos flechas que salen del estado en
 dirección a otro estado) y está etiquetadas con símbolos que en este ejemplo son `a` y `b`.
+
+
+
