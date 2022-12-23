@@ -245,12 +245,12 @@ diseñar ha de contener al menos los métodos:
 * *advance()*
 * *execute_sequence()*
 
-El directorio `robot-simulator-initial` de esta práctica contiene código que puede servirle de ayuda para la
+El directorio `robot-simulator-initial/` de esta práctica contiene código que puede servirle de ayuda para la
 resolución del problema.
 
-Comience por descargar el ejercicio de exercism, que se alojará en un directorio con nombre `robot-simulator`.
+Comience por descargar el ejercicio de exercism, que se alojará en un directorio con nombre `robot-simulator/`.
 Sustituya en ese directorio los ficheros `robot_simulator.cpp` y `robot_simulator.h` por los del directorio
-`robot-simulator-initial`. Habiendo hecho esos cambios, ejecute `cmake` en el directorio
+`robot-simulator-initial/`. Habiendo hecho esos cambios, ejecute `cmake` en el directorio
 `robot-simulator-initial/build` y compruebe que el programa pasa los primeros tests.
 
 El el directorio `robot-simulator-initial` se han añadido los ficheros `robot_simulator_main.cc` y `Makefile`
@@ -291,6 +291,50 @@ Los estados de aceptación están indicados con círculos de doble trazo y son `
 El estado de arranque se indica con una flecha (triángulo) sobre él y es `q0`.
 Todos los estados del autómata de la figura tienen 2 transiciones (dos flechas que salen del estado en
 dirección a otro estado) y está etiquetadas con símbolos que en este ejemplo son `a` y `b`.
+
+En el directorio `p12-Automaton-class/src/` de esta práctica tiene un código inicial que puede servirle como punto
+de partida para su desarrollo.
+En el diseño que se propone intervienen las clases `Automaton`, `State` y `Transition` relacionadas de modo
+que un Autómata se caracteriza por un conjunto de estados (se utiliza un vector de estados, `states_`).
+Uno de esos estados es el estado inicial y algunos de los estados (pudieran ser todos ellos) son estados de
+aceptación y por tanto figuran en otro conjunto (otro vector).
+El autómata posee también un alfabeto, que es el conjunto de símbolos ({a, b} en el autómata de ejemplo) que
+producen las transiciones (aparecen como etiquetas de los arcos del diagrama).
+
+Por otra parte la clases `State` y `Transition` representan los estados y transiciones del autómata
+respectivamente.
+Los identificadores que se utilizan en ambas clases indican la finalidad tanto de los miembros de datos como
+de los métodos de las mismas.
+Así por ejemplo un objeto `Transtion` se caracteriza por el símbolo (caracter) de la transición y el estado de
+destino de la misma.
+
+El programa principal `automatons.cc` simplemente declara un objeto `Automaton` que invoca el método *Print()*
+para imprimir en pantalla la información correspondiente. 
+La ejecución de ese programa:
+
+`$ ./automatons ../example.dfa`
+
+debería imprimir en pantalla una salida como la siguiente:
+```
+DFA constructor. File name: ../example.dfa
+Autómata impreso:
+=================
+
+Número de Estados:4
+Estado de arranque: 0
+Alfabeto: {a, b}
+Estados de aceptación: {1, 2}
+delta(0, a) = 1
+delta(0, b) = 3
+delta(1, a) = 1
+delta(1, b) = 2
+delta(2, a) = 1
+delta(2, b) = 3
+delta(3, a) = 3
+delta(3, b) = 3
+
+```
+
 
 
 
