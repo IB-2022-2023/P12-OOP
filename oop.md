@@ -94,14 +94,14 @@ de Jutge).
 [mutuamente primos](https://en.wikipedia.org/wiki/Coprime_integers),
 es decir, si su único divisor común es el 1
 
-La función *main* del programa que usara esta clase podría contener, entre otras, sentencias como:
+La función *main* del programa que usara esta clase podría contener, entre otras, sentencias similares a las siguientes:
 ```
 main() {
-  ComputeInt computation; 
-  std::cout << computation.Factorial(5) << std::endl; 
-  std::cout << computation.SumSerie(100) << std::endl; 
-  std::cout << computation.IsPrime(13) << std::endl; 
-  std::cout << computation.AreRelativePrimes(13, 17) << std::endl; 
+  ComputeInt compute_integer{10, 7}; 
+  std::cout << compute_integer.Factorial() << std::endl; 
+  std::cout << compute_integer.SumSerie() << std::endl; 
+  std::cout << compute_integer.IsPrime() << std::endl; 
+  std::cout << compute_integer.AreRelativePrimes() << std::endl; 
 }
 ```
 
